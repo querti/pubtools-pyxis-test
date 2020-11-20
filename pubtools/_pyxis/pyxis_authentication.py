@@ -32,6 +32,12 @@ class PyxisSSLAuth(PyxisAuth):
         """
         self.crt_path = crt_path
         self.key_path = key_path
+    
+    def some_method(self):
+        a = 2 + 2
+        print(a)
+        if a == 4:
+            print('4')
 
     def apply_to_session(self, pyxis_session):
         """
