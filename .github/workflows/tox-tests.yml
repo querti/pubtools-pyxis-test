@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Update existing dependencies
+        run: sudo apt-get update -y
+      - name: Install system dependencies
+        run: sudo apt-get install -y libkrb5-dev
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -15,4 +19,4 @@ jobs:
         run: pip install tox
       - name: Run Tox
         # Run tox using the version of Python in `PATH`
-        run: tox -e py27
+        run: tox -e py27 -vv
