@@ -66,14 +66,13 @@ if os.environ.get("READTHEDOCS", None):
     extras_require["reST"].append("recommonmark")
 
 setup(
-    name="pubtools-pyxis",
+    name="pubtools-pyxis-lgallovi",
     version="0.1.0",
     description="Pubtools-pyxis",
     long_description=long_description,
-    long_description_content_type='text/x-rst',
-    author="",
-    author_email="",
-    url="",
+    author="Lubomir Gallovic",
+    author_email="lgallovi@redhat.com",
+    url="https://github.com/querti/pubtools-pyxis-test",
     classifiers=classifiers,
     packages=find_packages(exclude=["tests"]),
     data_files=[],
